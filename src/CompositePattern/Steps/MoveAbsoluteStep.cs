@@ -2,7 +2,7 @@
 
 namespace CompositePattern.Steps;
 
-internal class MoveAbsoluteStep : IStep
+internal class MoveAbsoluteStep : IStep // Leaf
 {
     private readonly int _position;
     private readonly IAxis _axis;

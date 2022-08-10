@@ -2,7 +2,7 @@
 
 namespace CompositePattern.Steps;
 
-internal class MoveRelativeStep : IStep
+internal class MoveRelativeStep : IStep // Leaf
 {
     private readonly int _amount;
     private readonly int _speed;

@@ -2,7 +2,7 @@
 
 namespace CompositePattern.Steps;
 
-internal class SetHomeStep : IStep
+internal class SetHomeStep : IStep // Leaf
 {
     private readonly IAxis _axis;
 
