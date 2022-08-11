@@ -21,5 +21,5 @@ recipe.Run();
 Console.WriteLine();
 
 // Running a Recipe with pre-initialized steps
-var recipeHome = new HomeRecipe(axisFactory);
-recipeHome.Run();
+var recipeGoToSample = new GoToSampleRecipe(axisFactory);
+recipeGoToSample.Run();
