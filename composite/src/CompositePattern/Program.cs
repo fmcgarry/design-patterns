@@ -9,11 +9,10 @@ var axisFactory = new AxisFactory();
 var recipe = new Recipe("CustomRecipe");
 
 // Adding Leaf
-IAxis _gantry = axisFactory.Create("Gantry");
-recipe.AddStep(new MoveRelativeStep(_gantry, 1000, 100));
+recipe.Add(new MoveRelativeStep(axisFactory.Create("Gantry"), 1000, 100));
 
 // Add Composite
-recipe.AddStep(new GoToSampleRecipe(10, axisFactory));
+recipe.Add(new GoToSampleRecipe(10, axisFactory));
 
 // Calling Component method
 recipe.Run();
@@ -21,5 +20,5 @@ recipe.Run();
 Console.WriteLine();
 
 // Running a Recipe with pre-initialized steps
-var recipeGoToSample = new GoToSampleRecipe(axisFactory);
+var recipeGoToSample = new GoToSampleRecipe(10, axisFactory);
 recipeGoToSample.Run();

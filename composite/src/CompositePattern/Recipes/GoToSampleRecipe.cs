@@ -33,7 +33,7 @@ internal class GoToSampleRecipe : Recipe
         IAxis gantry = _axisFactory.Create("Gantry");
         IAxis tray1 = _axisFactory.Create("Tray1");
 
-        AddStep(new MoveAbsoluteStep(gantry, _samplePositionX));
-        AddStep(new MoveAbsoluteStep(tray1, _samplePositionY));
+        Add(new MoveAbsoluteStep(gantry, _samplePositionX));
+        Add(new MoveAbsoluteStep(tray1, _samplePositionY));
     }
 }

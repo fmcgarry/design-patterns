@@ -11,7 +11,7 @@ internal class EnableAxisStep : IStep // Leaf
         _axis = axis;
     }
 
-    public void Run()
+    public void Run() // operation()
     {
         Console.WriteLine($"{nameof(EnableAxisStep)}: Enabling axis {_axis.Name}");
         _axis.IsEnabled = true;

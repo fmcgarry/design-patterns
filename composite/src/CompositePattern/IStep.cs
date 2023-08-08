@@ -14,5 +14,5 @@ internal interface IStep // Component
      * for an example.
      */
 
-    public void Run();
+    public void Run(); // operation()
 }

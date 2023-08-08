@@ -17,11 +17,11 @@ internal class RunSampleRecipe : Recipe
 
         IAxis gantry = _axisFactory.Create("Gantry");
 
-        AddStep(new GoToSampleRecipe(sampleNum, _axisFactory));
-        AddStep(new PickupSampleRecipe());
-        AddStep(new MoveAbsoluteStep(gantry, CellPosition)); // move to cell
-        AddStep(new InjectSampleRecipe());
-        AddStep(new MoveAbsoluteStep(gantry, CellPosition + 250)); // move out of the way
-        AddStep(new RunTestRecipe());
+        Add(new GoToSampleRecipe(sampleNum, _axisFactory));
+        Add(new PickupSampleRecipe());
+        Add(new MoveAbsoluteStep(gantry, CellPosition)); // move to cell
+        Add(new InjectSampleRecipe());
+        Add(new MoveAbsoluteStep(gantry, CellPosition + 250)); // move out of the way
+        Add(new RunTestRecipe());
     }
 }

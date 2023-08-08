@@ -15,7 +15,7 @@ internal class MoveRelativeStep : IStep // Leaf
         _speed = speed;
     }
 
-    public void Run()
+    public void Run() // operation()
     {
         Console.WriteLine($"{nameof(MoveRelativeStep)}: Moving axis {_axis.Name} by {_amount} at a speed of {_speed}");
         _axis.CurrentPosition += _amount;

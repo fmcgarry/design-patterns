@@ -13,7 +13,7 @@ internal class MoveAbsoluteStep : IStep // Leaf
         _position = position;
     }
 
-    public void Run()
+    public void Run() // operation()
     {
         Console.WriteLine($"{nameof(MoveAbsoluteStep)}: Moving axis {_axis.Name} to {_position}");
         _axis.CurrentPosition = _position;

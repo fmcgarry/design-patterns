@@ -10,17 +10,17 @@
             _name = name;
         }
 
-        public void AddStep(IStep step)
+        public void Add(IStep step) // add()
         {
             _steps.Add(step);
         }
 
-        public void RemoveStep(IStep step)
+        public void Remove(IStep step) // remove()
         {
             _steps.Remove(step);
         }
 
-        public void Run()
+        public void Run() // operation()
         {
             Console.WriteLine($"Running Recipe {_name}!");
 

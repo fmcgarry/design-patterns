@@ -11,7 +11,7 @@ internal class SetHomeStep : IStep // Leaf
         _axis = axis;
     }
 
-    public void Run()
+    public void Run() // operation()
     {
         Console.WriteLine($"{nameof(SetHomeStep)}: Setting axis {_axis.Name} home");
         _axis.CurrentPosition = 0;
